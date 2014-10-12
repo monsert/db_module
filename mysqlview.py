@@ -5,9 +5,11 @@ def show_tab (di):
 		print di[i]
 
 """ test bufer block """
+A = bufer.tabl_products ()
 
-A = bufer.tabl_products()
-show_tab ( A.view_all() )
+show_tab (A.product_row("UnitPrice", "=", "2.5") )
 
+print "####################"
 
-
+B = bufer.tabl_categories ()
+show_tab ( B.categories_row("CategoryID", "=", "1") )
